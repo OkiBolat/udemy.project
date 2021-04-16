@@ -1,4 +1,12 @@
 "use strict";
-const isChecked = true,
-      isClose = true;
-console.log(isChecked || isClose)
+const numberOfFilms = prompt('Сколько фильмов вы посмотрели?');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+}
+const lastFilm = prompt('Последний фильм?');
+const stars = prompt('Оценка?')
+ personalMovieDB.movies[lastFilm] = stars;
