@@ -1,20 +1,12 @@
 "use strict";
-const numberOfFilms = prompt('Сколько фильмов вы посмотрели?');
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?');
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
     privat: false,
-}
-// const a = prompt('Последний фильм?'),
-//       b = prompt('Оценка?'),
-//       c = prompt('Последний фильм?'),
-//       d = prompt('Оценка?');
-
-//  personalMovieDB.movies[a] = b;
-
-//  personalMovieDB.movies[c] = d;
+};
 
 
 for (let i = 0; i < 2; i++) {
@@ -27,7 +19,7 @@ for (let i = 0; i < 2; i++) {
     }else {
         console.log('error');
         i--;
-    }
+    };
 
    
 }
@@ -41,9 +33,62 @@ if (personalMovieDB.count < 10) {
     console.log('you kinoman')
 }else {
     console.log('error')
-}
+};
 
 console.log(personalMovieDB)
+
+
+
+
+
+
+let num = 20;
+
+function showFirstMessage (text) {
+    console.log(text);
+    num = 10;
+    
+}
+showFirstMessage(num);
+console.log(num);
+
+function calc (a, b) {
+    return (a + b);
+}
+console.log(calc(4, 5))
+console.log(calc(3, 3))
+
+
+function ret () {
+    let num = 50;
+
+
+
+    return num;
+};
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+
+
+
+
+
+
+
+
+
+
+
+// const a = prompt('Последний фильм?'),
+//       b = prompt('Оценка?'),
+//       c = prompt('Последний фильм?'),
+//       d = prompt('Оценка?');
+
+//  personalMovieDB.movies[a] = b;
+
+//  personalMovieDB.movies[c] = d;
 
 //  if (4 == 9) {
 //      console.log('Ok!');
