@@ -1,15 +1,31 @@
 "use strict";
-const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?');
+let numberOfFilms = +prompt('Сколько фильмов вы посмотрели?');
+
+function start() {
+    numberOfFilms = prompt('Сколько фильмов вы посмотрели?');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = prompt('Сколько фильмов вы посмотрели?');
+
+    }
+}
+start()
+
+////////////////////
+
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
-    privat: false,
+    privat: true,
 };
 
+// //////////
 
-for (let i = 0; i < 2; i++) {
+
+function rememberMyFilmes() {
+  for (let i = 0; i < 2; i++) {
     const a = prompt('Последний фильм?'),
           b = prompt('Оценка?');
 
@@ -19,23 +35,73 @@ for (let i = 0; i < 2; i++) {
     }else {
         console.log('error');
         i--;
-    };
+    };  
+    }
+}
+rememberMyFilmes();  
+/////////////////////////////
 
+
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено довольно мало фильмов")
+
+    }else if (personalMovieDB >= 10 && personalMovieDB <= 30){
+        console.log('Вы классический зритель')
+
+    }else if(personalMovieDB >= 30) {
+        console.log('Вы киноман')
+    }else {
+        console.log('Произошла ошибка')
+    } 
+}
+
+detectPersonalLevel();
+
+///////////////////////////////
+
+console.log(personalMovieDB);
+
+
+///////////
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB.privat)
+
+
+    }
+    
    
 }
-if (personalMovieDB.count < 10) {
-    console.log("not bad, not bad")
+showMyDB(personalMovieDB)
 
-}else if (personalMovieDB >= 10 && personalMovieDB <= 30){
-    console.log('you are good man')
 
-}else if(personalMovieDB >= 30) {
-    console.log('you kinoman')
-}else {
-    console.log('error')
-};
+/////
+function writeYourGenres() {
+    for(let i = 1; i <= 3; i++) {
+        personalMovieDB.genres[i - 1] = prompt('Любимый жанр ${i}');
+    }
+}
 
-console.log(personalMovieDB)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // методы и свойства строк и чисел
@@ -181,4 +247,4 @@ console.log(personalMovieDB)
 //     console.log(i)
 
 // }
-
+;
