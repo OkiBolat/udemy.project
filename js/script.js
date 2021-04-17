@@ -38,39 +38,76 @@ if (personalMovieDB.count < 10) {
 console.log(personalMovieDB)
 
 
+// методы и свойства строк и чисел
+
+// const str = 'test';
+// const arr = [1, 2, 4];
+
+// console.log(str.toUpperCase())
+// console.log(str)
+// console.log(str.toLowerCase)
+// console.log(str[2])
+
+// let fruit = 'some fruit'
+// console.log(fruit.indexOf('q'))
+
+// const logg = 'hello world';
+// console.log(logg.slice(6, 10));
+// console.log(logg.substring(6, 10));
+// console.log(logg.substr(6, 5));
+
+// const num = 12.2;
+// console.log(Math.round(num))
+
+// const test = '12.2px';
+// console.log(parseInt(test))
+// console.log(parseFloat(num))
 
 
 
 
-let num = 20;
 
-function showFirstMessage (text) {
-    console.log(text);
-    num = 10;
+
+
+
+
+
+
+// let num = 20;
+
+// function showFirstMessage (text) {
+//     console.log(text);
+//     num = 10;
     
-}
-showFirstMessage(num);
-console.log(num);
+// }
+// showFirstMessage(num);
+// console.log(num);
 
-function calc (a, b) {
-    return (a + b);
-}
-console.log(calc(4, 5))
-console.log(calc(3, 3))
-
-
-function ret () {
-    let num = 50;
+// function calc (a, b) {
+//     return (a + b);
+// }
+// console.log(calc(4, 5))
+// console.log(calc(3, 3))
 
 
-
-    return num;
-};
-
-const anotherNum = ret();
-console.log(anotherNum);
+// function ret () {
+//     let num = 50;
 
 
+
+//     return num;
+// }
+
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// //function expression
+// let logger = function() {
+//     console.log('hello')
+// };
+// logger();
+
+// const calc = (a, b) =>  a + b
 
 
 
